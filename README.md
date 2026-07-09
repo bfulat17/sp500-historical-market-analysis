@@ -18,9 +18,12 @@ This repository documents the SQL component of a broader analytics project, with
 - Conditional Aggregation
 - Ranking Functions
 - Data Validation
-- Time-series analysis
-- Financial data analysis
-
+- Time Series Analysis
+- Financial Data Analysis
+- Analytical Query Design
+- Google BigQuery
+- Git
+- GitHub
 
 -----------------------------------------------------------
 
