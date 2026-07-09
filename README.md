@@ -1,4 +1,4 @@
-# sp500-historical-market-analysis
+## sp500-historical-market-analysis
 
 An end-to-end SQL project analysing over 75 years of S&P500 historical market data (1950-2026*)
 
@@ -8,7 +8,7 @@ This repository documents the SQL component of a broader analytics project, with
 
 -----------------------------------------------------------
 
-Project Objectives
+## Project Objectives
 
 - Validate historical financial data prior to analysis
 - Measure long-term market appreciation
@@ -20,15 +20,18 @@ Project Objectives
 
 -----------------------------------------------------------
 
-Dataset
+## Dataset
 
-Source:
+## Source
+
 S&P 500 historical daily price data. (Kaggle import)
 
-Coverage:
+## Coverage
+
 1950-01-03 -> 2026-05-21
 
-Observations:
+## Observations
+
 19,217 trading days
 
 Fields Include
@@ -39,7 +42,7 @@ Low
 Close
 Volume
 
-Additional engineered fields
+## Additional engineered fields
 
 Daily Return
 Daily Volatility
@@ -48,13 +51,13 @@ Month
 Year
 Decade
 
-Known Limitations
+## Known Limitations
 
 - 1950-1962: High, Low, Open and Close prices are identical for many observatgions. Resulting in intraday volatility during this period being understated and volatility-based analyses should be interpreted from 1962 onwards. 
 
 -----------------------------------------------------------
 
-Project Structure
+## Project Structure
 
 01_sql/ 
 SQL Queries
@@ -70,9 +73,9 @@ Dashboard snapshots and visuals
 
 -----------------------------------------------------------
 
-SQL Analysis
+## SQL Analysis
 
-01 Data Validation
+## 01 Data Validation
 
 Validated
 
@@ -83,7 +86,7 @@ Validated
 
 -----------------------------------------------------------
 
-02 Decade Performance
+## 02 Decade Performance
 
 Calculated
 
@@ -93,7 +96,7 @@ Calculated
 
 -----------------------------------------------------------
 
-03 Daily Market Performance
+## 03 Daily Market Performance
 
 Analysed
 
@@ -105,7 +108,7 @@ Calculated sentiment balance by decade.
 
 -----------------------------------------------------------
 
-04 Rolling Returns & Volatility
+## 04 Rolling Returns & Volatility
 
 Calculated
 
@@ -114,7 +117,7 @@ Calculated
 
 -----------------------------------------------------------
 
-05 Highest Trading Volume
+## 05 Highest Trading Volume
 
 Identified
 
@@ -122,7 +125,7 @@ Identified
 
 -----------------------------------------------------------
 
-06 Extreme Market Movements
+## 06 Extreme Market Movements
 
 Investigated
 
@@ -130,7 +133,7 @@ Highest volatility trading days across market history
 
 -----------------------------------------------------------
 
-07 Annual Performance
+## 07 Annual Performance
 
 Calculated
 
@@ -140,7 +143,7 @@ Calculated
 
 -----------------------------------------------------------
 
-Key Findings
+## Key Findings
 
 - 2008 recorded highest sustained yearly volatility
 - 1987 contained the single most volatile trading day
@@ -150,7 +153,7 @@ Key Findings
 
 -----------------------------------------------------------
 
-Technologies
+## Technologies
 
 - Google BigQuery
 - SQL 
@@ -162,11 +165,11 @@ Power BI dashboards currently in development
 
 -----------------------------------------------------------
 
-Author
+## Author
 
 Bilal Fulat
 
-Skills Demonstrated: 
+## Skills Demonstrated: 
 
 - Common Table Expressions (CTEs)
 - Window Functions (LAG)
