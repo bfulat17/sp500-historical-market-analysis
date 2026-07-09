@@ -1,4 +1,4 @@
-# sp500-historical-market-analysis-
+# sp500-historical-market-analysis
 
 An end-to-end SQL project analysing over 75 years of S&P500 historical market data (1950-2026*)
 
