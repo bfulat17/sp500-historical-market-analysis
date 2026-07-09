@@ -1,8 +1,6 @@
 ## sp500-historical-market-analysis
 
-An end-to-end SQL project analysing over 75 years of S&P500 historical market data (1950-2026*)
-
-This project explores long-term market performance, volatility, trading sentiment, extreme market movements and historical market behaviour using Google BigQuery
+An end-to-end SQL project analysing over 75 years of S&P500 historical market data (1950-2026*), exploring long-term market performance, volatility, trading sentiment, extreme market movements and historical market behaviour using Google BigQuery
 
 This repository documents the SQL component of a broader analytics project, with Power BI dashboards and a written analytical report currently in development.
 
