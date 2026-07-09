@@ -8,6 +8,22 @@ This repository documents the SQL component of a broader analytics project, with
 
 -----------------------------------------------------------
 
+## Skills Demonstrated: 
+
+- Common Table Expressions (CTEs)
+- Window Functions (LAG)
+- ARRAY_AGG
+- CASE Statements
+- Aggregate Functions
+- Conditional Aggregation
+- Ranking Functions
+- Data Validation
+- Time-series analysis
+- Financial data analysis
+
+
+-----------------------------------------------------------
+
 ## Project Objectives
 
 - Validate historical financial data prior to analysis
@@ -169,15 +185,3 @@ Power BI dashboards currently in development
 
 Bilal Fulat
 
-## Skills Demonstrated: 
-
-- Common Table Expressions (CTEs)
-- Window Functions (LAG)
-- ARRAY_AGG
-- CASE Statements
-- Aggregate Functions
-- Conditional Aggregation
-- Ranking Functions
-- Data Validation
-- Time-series analysis
-- Financial data analysis
