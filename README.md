@@ -1,6 +1,6 @@
 ## sp500-historical-market-analysis
 
-An end-to-end SQL project analysing over 75 years of S&P500 historical market data (1950-2026*), exploring long-term market performance, volatility, trading sentiment, extreme market movements and historical market behaviour using Google BigQuery
+An end-to-end SQL project analysing over 75 years of S&P 500 historical market data (1950-2026*), exploring long-term market performance, volatility, trading sentiment, extreme market movements and historical market behaviour using Google BigQuery
 
 This repository documents the SQL component of a broader analytics project, with Power BI dashboards and a written analytical report currently in development.
 
@@ -31,7 +31,7 @@ This repository documents the SQL component of a broader analytics project, with
 - Measure long-term market appreciation
 - Analyse decade and year performance
 - Identify bullish and bearish trading behaviour 
-- Examine rolling market returns and Volatility
+- Examine rolling market returns and volatility
 - Investigate extreme periods of market volatility
 - Produce reproducible SQL suitable for business reporting. 
 
@@ -52,25 +52,25 @@ S&P 500 historical daily price data. (Kaggle import)
 19,217 trading days
 
 Fields Include
-Date
-Open
-High
-Low
-Close
-Volume
+- Date
+- Open
+- High
+- Low
+- Close
+- Volume
 
 ## Additional engineered fields
 
-Daily Return
-Daily Volatility
-Market Sentiment
-Month
-Year
-Decade
+- Daily Return
+- Daily Volatility
+- Market Sentiment
+- Month
+- Year
+- Decade
 
 ## Known Limitations
 
-- 1950-1962: High, Low, Open and Close prices are identical for many observatgions. Resulting in intraday volatility during this period being understated and volatility-based analyses should be interpreted from 1962 onwards. 
+- 1950-1962: High, Low, Open and Close prices are identical for many observations. Resulting in intraday volatility during this period being understated and volatility-based analyses should be interpreted from 1962 onwards. 
 
 -----------------------------------------------------------
 
@@ -154,9 +154,9 @@ Highest volatility trading days across market history
 
 Calculated
 
-- Annual Returns
-- Trading Day Sentiment
-- Annual Volatility
+- Annual returns
+- Trading day sentiment
+- Annual volatility
 
 -----------------------------------------------------------
 
