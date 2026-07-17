@@ -147,6 +147,8 @@ Identified
 Investigated
 
 Highest volatility trading days across market history
+Classified each day as a positive or negative market movement
+Identified which decades experienced the greatest concentration of extreme volatility
 
 -----------------------------------------------------------
 
