@@ -16,6 +16,7 @@
 -- No invalid pricing relationships were found 
 -- No negative prices or trading volumes were found. 
 -- Dataset deemed suitable for downstream  analysis. 
+-- Found 3013 prer 1962 records with identical OHLC values.
 
 WITH completeness_check AS (
 SELECT
@@ -48,9 +49,26 @@ duplicate_check AS (
     COUNTIF(close < 0) AS negative_close,
     COUNTIF(volume < 0) AS negative_volume
 FROM `project-00afef68-2dfe-48de-8dd.sp500_analysis.sp500_daily`
+),
+ ohlc_check AS (
+    SELECT
+        COUNTIF(
+            open = high
+            AND high = low
+            AND low = close
+        ) AS identical_ohlc_records,
+
+        COUNTIF(
+            EXTRACT(YEAR FROM date) < 1962
+            AND open = high
+            AND high = low
+            AND low = close
+        ) AS pre_1962_identical_ohlc_records
+    FROM `project-00afef68-2dfe-48de-8dd.sp500_analysis.sp500_daily`
 )
 SELECT
 *
 FROM completeness_check
 CROSS JOIN duplicate_check
-CROSS JOIN integrity_check;
+CROSS JOIN integrity_check
+CROSS JOIN ohlc_check;
