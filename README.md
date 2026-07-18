@@ -51,7 +51,7 @@ Investigates historical volatility, identifies the most volatile years and highl
 
 ![Extreme Market Movements](04_images/extreme_market_movements.png)
 
-Analyses the top 100 most volatile trading days and classifies them by positive & negative market movement and their total appearances in decades across the dataset.  
+Analyses the top 100 most volatile trading days and classifies them by positive & negative market movement and their concentration across decades.
 
 ---
 
@@ -125,41 +125,41 @@ Validation included:
 
 ## SQL Analysis
 
-### 01 Data Validation
+### [01 Data Validation](01_sql/01_sp500_data_validation.sql)
 
 - Dataset completeness
 - Integrity checks
 - Historical OHLC validation
 
-### 02 Decade Performance
+### [02 Decade Performance](01_sql/02_sp500_decade_validation_peformance.sql)
 
 - Decade appreciation
 - Opening & closing prices
 - Trading day counts
 
-### 03 Daily Market Performance
+### [03 Daily Market Performance](01_sql/03_sp500_daily_market_performance_by_decade.sql)
 
 - Positive
 - Negative
 - Flat trading days
 - Trading sentiment
 
-### 04 Rolling Returns & Volatility
+### [04 Rolling Returns & Volatility](01_sql/04_sp500_rolling_30_day_returns_and_volatility.sql)
 
 - Rolling returns
 - Rolling volatility
 
-### 05 Trading Volume
+### [05 Trading Volume](01_sql/05_sp500_top_100_highest_volatility_trading_day.sql)
 
 - Top 100 trading volume days
 
-### 06 Extreme Market Movements
+### [06 Extreme Market Movements](01_sql/06_sp500_extreme_market_movements.sql)
 
 - Top 100 volatile days
 - Positive vs negative market movements
 - Decade comparison
 
-### 07 Annual Performance
+### [07 Annual Performance](01_sql/08_sp500_yearly_performance.sql)
 
 - Annual returns
 - Annual volatility
@@ -173,7 +173,7 @@ Validation included:
 - The 2000s experienced the highest concentration of extreme volatility.
 - 2008 recorded the highest annual volatility.
 - Major crises produced sustained periods of elevated volatility rather than isolated spikes.
-- Long-term growth resulted from a slightly higher proportion of positive trading days over time.
+- Long-term growth coincided from a slightly higher proportion of positive than negative trading days over time. 
 
 ---
 
