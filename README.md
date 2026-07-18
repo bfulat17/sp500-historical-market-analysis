@@ -1,190 +1,237 @@
-## sp500-historical-market-analysis
+# 📈 S&P 500 Historical Market Analysis
 
-An end-to-end SQL project analysing over 75 years of S&P 500 historical market data (1950-2026*), exploring long-term market performance, volatility, trading sentiment, extreme market movements and historical market behaviour using Google BigQuery
+![Executive Overview](04_images/executive_overview.png)
 
-This repository documents the SQL component of a broader analytics project, with Power BI dashboards and a written analytical report currently in development.
+An end-to-end analytics project analysing **75 years of S&P 500 market history (1950–2026)** using **Google BigQuery, SQL and Power BI**.
 
------------------------------------------------------------
+---
 
-## Skills Demonstrated: 
+## Project Overview
 
-- Common Table Expressions (CTEs)
-- Window Functions (LAG)
-- ARRAY_AGG
-- CASE Statements
-- Aggregate Functions
-- Conditional Aggregation
-- Ranking Functions
-- Data Validation
-- Time Series Analysis
-- Financial Data Analysis
-- Analytical Query Design
-- Google BigQuery
-- Git
-- GitHub
+This project explores long-term market behaviour by analysing historical S&P 500 trading data.
 
------------------------------------------------------------
+The analysis covers:
+
+- Long-term market appreciation
+- Annual and decade performance
+- Market volatility
+- Trading sentiment
+- Extreme market movements
+- Data validation and quality assurance
+
+---
+
+## Dashboard
+
+### Executive Overview
+
+![Executive Overview](04_images/executive_overview.png)
+
+Provides a high-level summary of market performance including KPIs, closing price history and executive insights.
+
+---
+
+### Performance Analysis
+
+![Performance Analysis](04_images/performance_analysis.png)
+
+Analyses annual returns and decade performance, highlighting long-term appreciation and market downturns.
+
+---
+
+### Volatility Analysis
+
+![Volatility Analysis](04_images/volatility_analysis.png)
+
+Investigates historical volatility, identifies the most volatile years and highlights clustering around historical market events.
+
+---
+
+### Extreme Market Movements
+
+![Extreme Market Movements](04_images/extreme_market_movements.png)
+
+Analyses the top 100 most volatile trading days and classifies them by positive & negative market movement and their total appearances in decades across the dataset.  
+
+---
+
+### Data Validation
+
+![Data Validation](04_images/data_validation.png)
+
+Documents the validation process used to verify dataset completeness, integrity and known historical limitations before analysis.
+
+---
 
 ## Project Objectives
 
-- Validate historical financial data prior to analysis
+- Validate historical financial data
 - Measure long-term market appreciation
-- Analyse decade and year performance
-- Identify bullish and bearish trading behaviour 
-- Examine rolling market returns and volatility
-- Investigate extreme periods of market volatility
-- Produce reproducible SQL suitable for business reporting. 
+- Analyse decade and annual performance
+- Investigate market volatility
+- Examine extreme market events
+- Produce reproducible SQL suitable for business reporting
 
------------------------------------------------------------
+---
 
 ## Dataset
 
-## Source
+**Source**
 
-S&P 500 historical daily price data. (Kaggle import)
+Kaggle – Historical S&P 500 Daily Prices
 
-## Coverage
+**Coverage**
 
-1950-01-03 -> 2026-05-21
+1950-01-03 → 2026-05-21
 
-## Observations
+**Observations**
 
 19,217 trading days
 
-Fields Include
+**Fields**
+
 - Date
 - Open
 - High
 - Low
 - Close
 - Volume
-
-## Additional engineered fields
-
 - Daily Return
 - Daily Volatility
 - Market Sentiment
-- Month
 - Year
+- Month
 - Decade
 
-## Known Limitations
+---
 
-- 1950-1962: High, Low, Open and Close prices are identical for many observations. Resulting in intraday volatility during this period being understated and volatility-based analyses should be interpreted from 1962 onwards. 
+## Data Validation
 
------------------------------------------------------------
+The dataset passed all validation checks prior to analysis.
 
-## Project Structure
+Validation included:
 
-01_sql/ 
-SQL Queries
+- Duplicate trading days
+- Missing values
+- Invalid OHLC relationships
+- Negative prices and trading volumes
+- Historical OHLC consistency
 
-02_powerbi/
-Dashboard (work in progress)
+### Known Limitation
 
-03_report/ 
-Written analytical report (coming soon)
+3,013 observations prior to 1962 contain identical Open, High, Low and Close prices. These observations were excluded from volatility analysis.
 
-04_images/
-Dashboard snapshots and visuals
-
------------------------------------------------------------
+---
 
 ## SQL Analysis
 
-## 01 Data Validation
+### 01 Data Validation
 
-Validated
+- Dataset completeness
+- Integrity checks
+- Historical OHLC validation
 
-- Missing values
-- Duplicate dates
-- Invalid prices
-- Dataset integrity
-
------------------------------------------------------------
-
-## 02 Decade Performance
-
-Calculated
+### 02 Decade Performance
 
 - Decade appreciation
-- Opening and closing prices
+- Opening & closing prices
 - Trading day counts
 
------------------------------------------------------------
-
-## 03 Daily Market Performance
-
-Analysed
+### 03 Daily Market Performance
 
 - Positive
 - Negative
 - Flat trading days
+- Trading sentiment
 
-Calculated sentiment balance by decade. 
+### 04 Rolling Returns & Volatility
 
------------------------------------------------------------
-
-## 04 Rolling Returns & Volatility
-
-Calculated
-
-- 30-day rolling returns
+- Rolling returns
 - Rolling volatility
 
------------------------------------------------------------
-
-## 05 Highest Trading Volume
-
-Identified
+### 05 Trading Volume
 
 - Top 100 trading volume days
 
------------------------------------------------------------
+### 06 Extreme Market Movements
 
-## 06 Extreme Market Movements
+- Top 100 volatile days
+- Positive vs negative market movements
+- Decade comparison
 
-Investigated
-
-Highest volatility trading days across market history
-Classified each day as a positive or negative market movement
-Identified which decades experienced the greatest concentration of extreme volatility
-
------------------------------------------------------------
-
-## 07 Annual Performance
-
-Calculated
+### 07 Annual Performance
 
 - Annual returns
-- Trading day sentiment
 - Annual volatility
+- Trading sentiment
 
------------------------------------------------------------
+---
 
 ## Key Findings
 
-- 2008 recorded highest sustained yearly volatility
-- 1987 contained the single most volatile trading day
-- Long periods of uncertainty produced higher average volatility rather than isolated spikes
-- Bull markets were typically characterised by lower average volatility
-- Market appreciation is driven by the combined effect of slightly more positive than negative days over long periods. 
+- The S&P 500 delivered strong long-term appreciation despite major market crises.
+- The 2000s experienced the highest concentration of extreme volatility.
+- 2008 recorded the highest annual volatility.
+- Major crises produced sustained periods of elevated volatility rather than isolated spikes.
+- Long-term growth resulted from a slightly higher proportion of positive trading days over time.
 
------------------------------------------------------------
+---
 
 ## Technologies
 
 - Google BigQuery
-- SQL 
+- SQL
+- Power BI
+- DAX
 - Git
 - GitHub
 
+---
 
-Power BI dashboards currently in development
+## Repository Structure
 
------------------------------------------------------------
+```text
+sp500-historical-market-analysis/
+│
+├── 01_sql/
+├── 02_powerbi/
+│   └── sp500_historical_market_analysis.pbix
+├── 03_report/
+├── 04_images/
+└── README.md
+```
+
+---
+
+## Skills Demonstrated
+
+### SQL
+
+- Common Table Expressions (CTEs)
+- Window Functions
+- ARRAY_AGG
+- CASE Statements
+- Ranking Functions
+- Conditional Aggregation
+
+### Analytics
+
+- Time Series Analysis
+- Financial Data Analysis
+- Data Validation
+- Dashboard Design
+- Data Storytelling
+
+### Tools
+
+- Google BigQuery
+- Power BI
+- DAX
+- Git
+- GitHub
+
+---
 
 ## Author
 
-Bilal Fulat
-
+**Bilal Fulat**
