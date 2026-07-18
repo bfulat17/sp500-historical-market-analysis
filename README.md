@@ -149,13 +149,13 @@ Validation included:
 - Rolling returns
 - Rolling volatility
 
-### 05 Trading Volume
+### [05 Trading Volume](01_sql/05_sp500_top_100_highest_volume_trading_days.sql)
 
 - Top 100 trading volume days
 
 ### [06 Extreme Market Movements](01_sql/06_sp500_extreme_market_movements.sql)
 
-- [Top 100 volatile days](01_sql/05_sp500_top_100_highest_volatility_trading_days.sql)
+- Top 100 volatile days
 - Positive vs negative market movements
 - Decade comparison
 
