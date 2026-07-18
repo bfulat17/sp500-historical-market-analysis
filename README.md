@@ -196,8 +196,7 @@ sp500-historical-market-analysis/
 ├── 01_sql/
 ├── 02_powerbi/
 │   └── sp500_historical_market_analysis.pbix
-├── 03_report/
-├── 04_images/
+├── 03_images/
 └── README.md
 ```
 
